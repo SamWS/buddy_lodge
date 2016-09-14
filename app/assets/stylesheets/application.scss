@@ -1,0 +1,166 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 14px; 
+    color: #666;
+}
+
+#formContainer {
+  width: 60%;
+  margin: 5em auto 0 auto;
+}
+
+#submitUserBtn {
+  text-align: right;
+}
+
+/*.loginInput {
+  margin-left: 1em;
+}
+*/
+
+#logOutBtn {
+  background:none;
+  border:none;
+  color: white;
+  background-color: black;
+}
+
+#logoutBtnListItem {
+  text-align: center;
+  padding-top: 12%;
+  color: white;
+  background-color: black;
+}
+
+
+#bookingPageMap {
+  width: 50%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.findAListingH4 {
+  display: inline-block;
+}
+
+#postAListingRight {
+  padding-left: 53%;
+}
+
+.housePetFormPage {
+  width: 60%;
+  margin: 1em auto 2em auto;
+}
+
+#petHouseSubmitBtn {
+  text-align: right;
+}
+
+#leftSideListingsPage {
+  height: 95vh;
+  width: 49.6%;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  text-align: center;
+}
+
+#rightSideListingsPage {
+  height: 95vh;
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 300px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+
+.listingImgTag {
+  width: 18%;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.listingInfoTag {
+  display: inline-block;
+  padding: 1em;
+  border-bottom: 1px solid black;
+}
+
+.listingPageParaTag {
+  vertical-align: middle;
+}
+
+#share-buttons img {
+  width: 35px;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
+  display: inline;
+}
+

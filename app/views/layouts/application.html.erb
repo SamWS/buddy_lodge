@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BuddyLodgeApp</title>
+    <%= csrf_meta_tags %>
+
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+          <% if logged_in? %>
+  <ul id="dropdown1" class="dropdown-content">
+  <li><a href="/users/<%= current_user.id %>">Profile</a></li>
+  <li><a href="#!">Listings</a></li>
+  <li><a href="#!">Bookings</a></li>
+  <li class="divider"></li>
+  <li id="logoutBtnListItem">
+  <%= form_tag '/session', method: 'delete', class: 'subBarForm' do %>
+    <button id="logOutBtn">logout</button>
+  <% end %>
+  </li>
+</ul>
+<% end %>
+  
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">BuddyLodge</a>
+      <% if !logged_in? %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/users/new">sign up</a></li>
+        <li><a href="#">/</a></li>
+        <li><a class="waves-effect waves-light modal-trigger" href="#loginModal">login</a></li>
+      </ul>
+
+
+      <% end %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+
+          <ul class="right hide-on-med-and-down">
+            <li><a class="waves-light modal-trigger" href="#searchModal"><i class="material-icons left">search</i>Search for a Listing</a></li>
+          <% if logged_in? %>
+            <li><a href="#l" class="dropdown-button" data-activates="dropdown1"><i class="material-icons right">view_module</i><%= User.find(session[:user_id]).name.capitalize %></a></li>
+
+          <% end %>            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4>
+        <%= form_tag '/session', method: 'post' do %>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" name="email">
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate" name="password">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div id="submitUserBtn">
+          <button id="loginSubmit">submit</button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div id="searchModal" class="modal">
+    <div class="modal-content">
+      <h4 class="findAListingH4">Find a Listing</h4>
+      <a href="/listings/new" class="findAListingH4" id="postAListingRight">Post a Listing</a>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="location" type="text" class="validate">
+          <label for="location">Location</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="/listings" class=" modal-action modal-close waves-effect waves-green btn-flat">Search</a>
+    </div>
+  </div>
+
+    <%= yield %>
+
+  
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0yXsHR3MB9_AXgWhPWtxY2cbzEFu9-Js&libraries=places&callback=initMap"
+        async defer></script>
+  </body>
+</html>

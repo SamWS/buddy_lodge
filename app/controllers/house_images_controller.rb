@@ -1,0 +1,2 @@
+class HouseImagesController < ApplicationController
+end
