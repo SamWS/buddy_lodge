@@ -11,24 +11,28 @@
         <img class="listingImgTag" class="listingInfoTag" src="<%= listing.pets.first.avatar if listing.pets.first %>" alt="">
       </div>
       </a>
+
+      <div id="listingPageBottomPopup" class="modal bottom-sheet">
+        <div class="modal-content">
+          <h4><%= listing.address %></h4>
+          <p><%= listing.user.name %> is looking for someone to watch <%= listing.pets.first.name if listing.pets.first %>.</p>
+          <p>If you're going to be in <%= listing.user.location %> between <%= listing.date %>, and would like to contact <%= listing.user.name %>, please <a href="mailto:<%= listing.user.email %>" target="_top">email</a> them.</p>
+          <h5>Details</h5>
+          <p><%= listing.pets.first.describe if listing.pets.first %></p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
+        </div>
+      </div>
+
+      <% end %>
   </div>
+
   <div id="rightSideListingsPage">    
-    <input id="pac-input" class="controls" type="text"
-        placeholder="Enter a location">
+    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
     <div id="map"></div>
   </div>
 </div>
 
-  <div id="listingPageBottomPopup" class="modal bottom-sheet">
-    <div class="modal-content">
-      <h4><%= listing.address %></h4>
-      <p><%= listing.user.name %> is looking for someone to watch <%= listing.pets.first.name if listing.pets.first %>.</p>
-      <p>If you're going to be in <%= listing.user.location %> between <%= listing.date %>, and would like to contact <%= listing.user.name %>, please <a href="mailto:<%= listing.user.email %>" target="_top">email</a> them.</p>
-      <h5>Details</h5>
-      <p><%= listing.pets.first.describe if listing.pets.first %></p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
-    </div>
-      <% end %>
-  </div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0yXsHR3MB9_AXgWhPWtxY2cbzEFu9-Js&libraries=places&callback=initMap"
+        async defer></script>

@@ -1,11 +1,19 @@
-<h1>hello world 2</h1>
-  <div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore odit provident, ab modi nihil ipsum, doloremque hic corrupti animi harum corporis rem fuga sapiente perspiciatis mollitia, excepturi at aspernatur illo.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic delectus dolorum doloremque laboriosam eum, nam vitae aspernatur debitis consequatur eligendi eaque fugiat consectetur tenetur, ratione nulla impedit suscipit, repudiandae quod!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore laudantium perspiciatis maiores repellat, debitis maxime nemo sequi aspernatur iste facere aut similique cupiditate expedita. A ducimus ullam maxime minus animi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, dolore voluptatem, neque, ipsam quidem officia ipsum asperiores tempore atque, facere iste vel quisquam deserunt! Voluptatum ipsa, quo laudantium id placeat?</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae neque quae deleniti modi, et repudiandae possimus sunt amet, nobis unde iste, distinctio, nemo quibusdam. Est aliquid officiis temporibus in id.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A totam, obcaecati. Praesentium velit nostrum, eum corrupti sint accusamus aliquid a, eius earum, aut reprehenderit ab impedit dolorem perferendis. Similique, quod?</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ratione at ipsam excepturi harum quae necessitatibus accusamus, consequatur hic repellat, minus, ab suscipit dolor! Officiis dolores unde dolore nulla dignissimos.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates provident hic voluptas fugit exercitationem dignissimos, neque, aliquid nisi labore laboriosam architecto eum. Autem sint adipisci at deserunt quidem ea nobis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt exercitationem eos dicta quaerat temporibus dolores laboriosam esse maxime cum odit ut fugit culpa dignissimos quibusdam inventore illum illo possimus, porro.</p>
+<div class="mainPageBodyDiv">
+  <div class="mainPageInnerBodyDiv">
+    
+    <h1>hello world 2</h1>
+      <div>
+        <div class="carousel">
+        <% HouseImage.all.each do |house| %>
+          <a class="carousel-item" href="#one!"><img class="mainPageImageScroller" src="<%= house.image %>" alt=""></a>
+        <% end %>
+        </div>
+                
+      </div>
+    
   </div>
+  
+</div>
 
         <footer class="page-footer">
           <div class="container" v>

@@ -20,7 +20,7 @@
           <% if logged_in? %>
   <ul id="dropdown1" class="dropdown-content">
   <li><a href="/users/<%= current_user.id %>">Profile</a></li>
-  <li><a href="#!">Listings</a></li>
+  <li><a href="/listings/<%= current_user.id %>">Listings</a></li>
   <li><a href="#!">Bookings</a></li>
   <li class="divider"></li>
   <li id="logoutBtnListItem">
@@ -47,7 +47,9 @@
         <li>
 
           <ul class="right hide-on-med-and-down">
-            <li><a class="waves-light modal-trigger" href="#searchModal"><i class="material-icons left">search</i>Search for a Listing</a></li>
+            <li><a class="waves-light modal-trigger" href="/listings"><i class="material-icons left">search</i>Search for a Listing</a></li>
+            <li><a href="/listings/new" class="findAListingH4">Post Listing</a></li>
+
           <% if logged_in? %>
             <li><a href="#l" class="dropdown-button" data-activates="dropdown1"><i class="material-icons right">view_module</i><%= User.find(session[:user_id]).name.capitalize %></a></li>
 
@@ -83,26 +85,9 @@
     </div>
   </div>
 
-  <div id="searchModal" class="modal">
-    <div class="modal-content">
-      <h4 class="findAListingH4">Find a Listing</h4>
-      <a href="/listings/new" class="findAListingH4" id="postAListingRight">Post a Listing</a>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="location" type="text" class="validate">
-          <label for="location">Location</label>
-        </div>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <a href="/listings" class=" modal-action modal-close waves-effect waves-green btn-flat">Search</a>
-    </div>
-  </div>
-
     <%= yield %>
 
   
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0yXsHR3MB9_AXgWhPWtxY2cbzEFu9-Js&libraries=places&callback=initMap"
-        async defer></script>
+        <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
   </body>
 </html>

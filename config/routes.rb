@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   # destroying a session / logging out
   delete '/session', to: 'session#destroy'
 
+  get '/api/listings', to: 'api/listings#index'
+
 end
