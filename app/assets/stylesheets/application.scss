@@ -17,7 +17,11 @@
 body {
     font-family: 'Source Sans Pro', sans-serif; 
     font-size: 14px; 
-    color: #666;
+    background-color: #e6e6e6;
+}
+
+.backgroundImgHome {
+    background-image: url("http://www.planwallpaper.com/static/images/518079-background-hd.jpg");
 }
 
 #formContainer {
@@ -80,6 +84,7 @@ body {
   box-sizing: border-box;
   vertical-align: top;
   text-align: center;
+  overflow-y: scroll;
 }
 
 #rightSideListingsPage {
@@ -87,6 +92,7 @@ body {
   width: 50%;
   display: inline-block;
   box-sizing: border-box;
+  border-left: 1px solid black;
 }
 
       html, body {
@@ -141,7 +147,7 @@ body {
       }
 
 .listingImgTag {
-  width: 18%;
+  width: 14%;
   box-shadow: 10px 10px 5px #888888;
 }
 
@@ -168,9 +174,41 @@ body {
 }
 
 .mainPageBodyDiv {
-  text-align: center;
+  text-align: left;
 }
 
 .mainPageInnerBodyDiv {
   width: 70%;
+  display: inline-block;
+  margin-left: 3em;
+}
+
+.buddyLodgeLogo {
+  vertical-align: middle;
+  width: 14%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#pageTagline {
+  color: white;
+  margin: 0;
+  padding-top: 1em;
+}
+
+#footerTopMarginRemove {
+  margin-top: 0;
+}
+
+.carousel .carousel-item {
+width:300px !important;}
+
+.mainPageRightSideText {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    margin-top: 3em;
+    padding: 0.6em 0.7em 0.6em 0.7em;
+    background-color: rgba(104, 94, 94, 0.8);
+    color: white;
 }

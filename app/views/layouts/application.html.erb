@@ -20,7 +20,7 @@
           <% if logged_in? %>
   <ul id="dropdown1" class="dropdown-content">
   <li><a href="/users/<%= current_user.id %>">Profile</a></li>
-  <li><a href="/listings/<%= current_user.id %>">Listings</a></li>
+  <li><a href="#!">Listings</a></li>
   <li><a href="#!">Bookings</a></li>
   <li class="divider"></li>
   <li id="logoutBtnListItem">
@@ -33,7 +33,7 @@
   
   <nav>
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo">BuddyLodge</a>
+      <a href="/" class="brand-logo"><img class="buddyLodgeLogo" src="http://www.copperkennel.com/wp-content/uploads/2014/02/dog-house-outline-hi.png" alt="">BuddyLodge</a>
       <% if !logged_in? %>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/users/new">sign up</a></li>

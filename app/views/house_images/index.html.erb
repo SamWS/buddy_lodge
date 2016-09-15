@@ -1,21 +1,36 @@
-<div class="mainPageBodyDiv">
-  <div class="mainPageInnerBodyDiv">
-    
-    <h1>hello world 2</h1>
-      <div>
-        <div class="carousel">
-        <% HouseImage.all.each do |house| %>
-          <a class="carousel-item" href="#one!"><img class="mainPageImageScroller" src="<%= house.image %>" alt=""></a>
-        <% end %>
+<div class="backgroundImgHome">
+  <div class="mainPageBodyDiv">
+
+    <div class="mainPageInnerBodyDiv">
+      
+      <h5 id="pageTagline">An excuse to go...</h5>
+        <div>
+          <div class="carousel">
+          <% HouseImage.all.each do |house| %>
+            <a class="carousel-item" href="#one!"><img class="mainPageImageScroller" src="<%= house.image %>" alt=""></a>
+          <% end %>
+          </div>
+                  
+
         </div>
-                
+      
+    </div>
+      <div class="mainPageRightSideText">
+        <div>
+        <h5>Why BuddyLodge?</h5>
+        <p>
+        Buddy Lodge is for people who want to find a reliable pet sitter whilst they're away on holidays. Post a listing and wait to be contacted by people who are hoping to be in your area around that time and are looking for free accomodation. Read profiles and find a sitter!
+        </p>
+          <p>
+            On the other side, have a mini holiday, in someone elses house, for free! People are always looking for pet sitters, so become one and explore a city while you do.
+          </p>
+        </div>
       </div>
     
-  </div>
-  
+  </div> 
 </div>
 
-        <footer class="page-footer">
+        <footer class="page-footer" id="footerTopMarginRemove">
           <div class="container" v>
             <div class="row">
               <div class="col l6 s12">

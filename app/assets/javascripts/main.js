@@ -115,25 +115,6 @@ $( document ).ready(function() {
 
 
 
-// var Geocoder = google.maps.Geocoder;
-
-
-// $.ajax({
-//   url: '/api/listing'
-// })
-
-
-// listing.forEach(function(element) {
-// Geocoder.geocode({
-//   address: element.address,
-// }, function(res, status) {
-//   console.log(res);
-// })
-
-// })
-
-
-
 
 
 
