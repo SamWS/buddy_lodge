@@ -1,6 +1,6 @@
 # README
 
-#BuddyLodge - ##An excuse to go...
+#BuddyLodge - An excuse to go...
 
 ##How to Use
 
