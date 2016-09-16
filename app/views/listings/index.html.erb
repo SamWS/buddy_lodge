@@ -2,7 +2,7 @@
   <div id="leftSideListingsPage">
       <% Listing.all.each do |listing| %>
       <div class="listingInfoTag" class="listingPageParaTag">
-        <a class="waves-effect waves-light modal-trigger" href="#listingPageBottomPopup">
+        <a class="waves-effect waves-light modal-trigger" href="#listingPageBottomPopup<%= listing.id %>">
       <img class="listingImgTag" class="listingInfoTag" src="<%= listing.house_images.first.image if listing.house_images.first%>" alt="">
       <div class="listingInfoTag">
         <p><%= listing.date %></p>
@@ -12,11 +12,11 @@
       </div>
       </a>
 
-      <div id="listingPageBottomPopup" class="modal bottom-sheet">
+      <div id="listingPageBottomPopup<%= listing.id %>" class="modal bottom-sheet">
         <div class="modal-content">
           <h4><%= listing.address %></h4>
           <p><%= listing.user.name %> is looking for someone to watch <%= listing.pets.first.name if listing.pets.first %>.</p>
-          <p>If you're going to be in <%= listing.user.location %> between <%= listing.date %>, and would like to contact <%= listing.user.name %>, please <a href="mailto:<%= listing.user.email %>" target="_top">email</a> them.</p>
+          <p>If you'd like to stay at <%= listing.address %> between <%= listing.date %>, please contact <%= listing.user.name %> by <a href="mailto:<%= listing.user.email %>" target="_top">email</a> them.</p>
           <h5>Details</h5>
           <p><%= listing.pets.first.describe if listing.pets.first %></p>
         </div>
